@@ -1,0 +1,105 @@
+:root {
+    --primary: rgb(55, 10, 160);
+    --bg: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--primary);
+    min-height: 3000px;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1,1,1, 0.8);
+    border-bottom: 1px solid var(--bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;    
+}
+.navbar .navbar-logo{
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.navbar .navbar-nav a {
+display: inline-block;
+font-size: 1.3rem;
+margin: 0 1rem;
+font-weight: 500;
+color: var(--primary);
+}
+.navbar .navbar-nav ::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.7);
+}
+
+/* home section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero .Content{
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+/* about */
+.About, .Contact , .Experience{
+    padding: 9rem 7% 1.4rem;
+}
+.About h2, .Contact h2, .Experience h2{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    color: var(--primary);
+}
+
+
+
+/* media quary */
+/* laptop */
+@media(max-width: 1366px){
+    html{
+        font-size: 80%;
+    }
+}
+
+/* tablet */
+@media(max-width: 760px){
+    html{
+        font-size: 60%;
+    }
+}
+/* hp */
+@media(max-width: 450px){
+    html{
+        font-size: 40%;
+    }
+}
